@@ -1,0 +1,31 @@
+.vertical-center{
+    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh; /* These two lines are counted as one :-)       */
+
+    display: flex;
+    align-items: center;
+}
+
+.body {
+    background: #efefee;
+}
+.input {
+    background-color: red;
+}
+#index-card {
+    min-height: 300px;
+}
+
+#input-group {
+    position: relative;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+#custom-file {
+    text-align: left;
+}
+
+.custom-file-label{
+    text-align: center;
+}
