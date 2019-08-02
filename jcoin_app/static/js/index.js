@@ -46,6 +46,7 @@ function cancelUpload() {
 function submitUpload() {
     console.log("submit upload");
     if(validateInput()){
+        console.log($('#file-name').val());
         alert('yes!')
     } else{
         alert("no!");
