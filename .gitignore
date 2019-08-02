@@ -2,3 +2,4 @@
 .DS_Store
 *.pyc
 jcoin_app/__pycache__/
+jcoin_app/instance
