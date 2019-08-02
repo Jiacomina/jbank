@@ -24,12 +24,16 @@ def create_app(test_config=None):
     except OSError:
         pass
 
-    # a simple page that says hello
-    @app.route('/hello')
-    def hello():
-        return 'Hello, World!'
-
     @app.route('/')
     def index():
         return render_template("index.html")
+
+    @app.route('/dashboard')
+    def dashboard():
+        return render_template("dashboard.html")
+
+    @app.route('/jfund')
+    def jfund():
+        return render_template("jfund.html")
+
     return app
