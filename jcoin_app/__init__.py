@@ -57,9 +57,12 @@ def create_app(test_config=None):
                 return render_template("dashboard.html", data=data, columns = columns)
         return render_template("index.html")
 
+
     @app.route('/dashboard')
     def dashboard():
         return render_template("dashboard.html")
+
+
 
     @app.route('/jfund')
     def jfund():
