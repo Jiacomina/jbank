@@ -8,44 +8,48 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="static/js/index.js"></script>
     <link rel="stylesheet" type="text/css" href="static/styles/index.css">
-
 </head>
-<span></span>
-<div class="jumbotron vertical-center">
-    <div class='mx-auto container ' style="width: 50%" ;>
-        <img src="static/images/piggy_bank.png" style="width: 30%" ; class=" mx-auto d-block">
-        <br>
-        <h3 class="text-center">Welcome to Jcoin</h3><br>
-        <div class="card row align-items-center text-center">
-            <div class="card-body col">
-                <p class="card-text">Convert your financial payments into an informative dashboard</p>
-                <input id="input-csv" type="file" accept=".csv" style="display:none;" />
-                <div id="form" >
-                    <div id="option-group">
-                        <a href="#" id="btn-upload" class="btn btn-outline-primary"><i class="fas fa-file-upload"></i>
-                            Upload CSV</a>
-                        <br>
-                        or <a href="#" class="skip-csv">skip</a>
-                    </div>
-                    <div id="input-group" style="display:none;">
-                        <div class="input-group">
-                                <input type="text" class="form-control input-csv" placeholder="Choose file" aria-describedby="fileHelp" required>
+
+<body>
+    <div class="jumbotron vertical-center">
+        <div class='mx-auto container mainbox'>
+            <a href="/jfund"><img src="static/images/piggy_bank.png" style="width: 30%" ; class=" mx-auto d-block">
+            </a><br>
+            <h3 class="text-center">Welcome to Jcoin</h3><br>
+            <div class="card row align-items-center text-center">
+                <div class="card-body col">
+                    <p class="card-text">Convert your financial payments into an informative dashboard</p>
+                    <div id="form">
+                        <div id="option-group">
+                            <a href="#" id="btn-upload" class="btn btn-outline-primary"><i
+                                    class="fas fa-file-upload"></i>
+                                Upload CSV</a>
+                            <br>
+                            or <a href="/dashboard" class="skip-csv">skip</a>
+                        </div>
+                        <div id="input-group" style="display:none;">
+                            <form method=post enctype=multipart/form-data> <div class="input-group input-group-sm">
+                                <input type="text" id='input-csv' class="form-control input-csv"
+                                    placeholder="Choose file" aria-describedby="fileHelp" required>
                                 <div class="valid-feedback order-last">File is valid</div>
                                 <div class="invalid-feedback order-last">File is required</div>
                                 <label class="input-group-append mb-0">
-                                  <span class="btn btn-primary input-file-btn">
-                                    Browse… <input type="file" hidden>
-                                  </span>
+                                    <span class="btn btn-primary input-file-btn">
+                                        Browse… <input id='file-name' accept=".csv" type="file" name='file' hidden>
+                                    </span>
                                 </label>
-                              </div>
-                              <small id="fileHelp" class="form-text text-muted">Upload a CSV File</small><br>
+                        </div>
+                        <small id="fileHelp" class="form-text text-muted">Upload a CSV File</small><br>
                         <a href="#" id="btn-back" style="display:none;" class="btn btn-primary">Back</a>
-                        <a href="#" id="btn-submit" style="display:none;" aria-disabled="true" disabled class="btn btn-secondary disabled">Submit</a>
+                        <input type="submit" id="btn-submit" style="display:none;" value="Submit"
+                            class="btn btn-success">
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+    </div>
+</body>
 
 </html>
